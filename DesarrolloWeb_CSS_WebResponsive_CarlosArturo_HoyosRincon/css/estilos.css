@@ -1,0 +1,13 @@
+header {
+   background-color: #5b7989;
+   padding: 10px;
+   float: left;
+}
+
+nav {
+    float: right;
+}
+
+nav:visited {
+    
+}
