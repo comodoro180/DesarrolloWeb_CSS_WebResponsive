@@ -2,13 +2,17 @@ body {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 0%;
+    background-color: #02010a;
+}
+
+.contenedor {
+    max-width: 900px; 
 }
 
 header {
     background-color: #5b7989;
     padding: 10px;
-    color: white;
-    /* float: left; */
+    color: white;    
     border-radius: 10px 10px 0px 0px;       
 }
 
@@ -16,7 +20,7 @@ header h1 {
     text-shadow: 2px 2px 2px #02010a;    
 }
 
-.contenedor {
+header {
     display:-webkit-flex;
     display:-ms-flexbox;
     display:flex;
@@ -25,10 +29,32 @@ header h1 {
     align-items: center;    
 }
 
-.link_actual {
-    text-decoration: none;
+a {   
+    color: white; 
+    padding: 10px;   
+}
+
+.link_actual {    
+    text-decoration-line: none;
 }
 
 footer {
     border-radius: 0px 0px 10px 10px;
 } 
+
+@media (max-width:900px){
+    body {
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0%;
+    }
+
+    header {
+        justify-content:center;        
+    } 
+
+    
+    h1 {
+        text-align: center;
+    }
+}
