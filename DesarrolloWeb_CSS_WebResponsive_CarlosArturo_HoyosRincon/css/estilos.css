@@ -1,60 +1,78 @@
+@font-face {
+	font-family: FuenteDancing;
+	src:url(../fuentes/DancingScript-Regular.ttf);
+}
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 0%;
     background-color: #02010a;
+    font-family: FuenteDancing;
 }
 
 .contenedor {
-    max-width: 900px; 
+   max-width: 900px;
+   margin: auto;
+   display:flex;
+   flex-flow: row wrap; 
 }
 
 header {
-    background-color: #5b7989;
-    padding: 10px;
-    color: white;    
-    border-radius: 10px 10px 0px 0px;       
-}
-
-header h1 {    
-    text-shadow: 2px 2px 2px #02010a;    
-}
-
-header {
-    display:-webkit-flex;
-    display:-ms-flexbox;
+    width: 100%;
+    padding: 20px;
+    background-color: #5b7989;    
+    border-radius: 10px 10px 0px 0px;
     display:flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
 }
 
-a {   
-    color: white; 
-    padding: 10px;   
+header h1 {
+    color: white;
+    text-shadow: 2px 2px 2px #02010a;
+}
+
+header nav a {
+    color:white;
+    padding-left: 20px;
 }
 
 .link_actual {    
     text-decoration-line: none;
 }
 
-footer {
-    border-radius: 0px 0px 10px 10px;
-} 
+.seccionCentral {
+    width: 100%;
+    background-color: #82c3a6;
+    /*
+    display:flex;    
+    justify-content: center;
+    align-items: center; 
+    */   
+}
 
-@media (max-width:900px){
-    body {
-        margin-left: 0%;
-        margin-right: 0%;
-        margin-top: 0%;
+#imagenCentral {
+    width: 70%;
+    margin:10px auto;
+    display: block;    
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor {
+        flex-direction: column;
     }
 
     header {
-        justify-content:center;        
-    } 
+        flex-direction: column;                
+    }
 
-    
-    h1 {
+    header h1 {
+        padding-bottom: 10px;
         text-align: center;
     }
 }
