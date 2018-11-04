@@ -84,8 +84,7 @@ figcaption h3 {
 .seccionSecundaria div img {
     width: 80%;    
     margin: 2% auto;
-    display: block;
-          
+    display: block;    
 }
 
 #imagenSecundaria1:hover, #imagenSecundaria2:hover {
