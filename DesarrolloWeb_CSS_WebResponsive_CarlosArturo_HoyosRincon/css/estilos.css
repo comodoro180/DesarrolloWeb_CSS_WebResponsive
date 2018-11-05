@@ -11,7 +11,7 @@
 
 body {
     background-color: #02010a;
-    font-family: FuenteDancing;
+    font-family: FuenteDancing;  
 }
 
 .contenedor {
@@ -30,7 +30,22 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    animation-name: animacion;
+    animation-duration: 1s;  
 }
+
+@keyframes animacion {
+	0% {
+        margin-top: 150%;
+	}
+	60% {
+        margin-top: -5%;
+	}
+	100% {
+		margin-top: 0%;
+	}
+}
+
 
 header h1 {
     color: white;
@@ -66,25 +81,37 @@ figcaption h3 {
     margin: 2% auto;
     display: block;    
 }
-/*---------------------------*/
 
-/* SECCION CENTRAL           */
 /*---------------------------*/
-.seccionCentral {
+/* SECCION CENTRAL           */
+.seccionCentral {   
     width: 100%;
     background-color: #d5c75f;
     display:flex;
-    flex-flow: row nowrap;
+    flex-flow: wrap;
     justify-content: space-around;
     align-items: center;    
 }
 
 .seccionCentral div{
     padding: 3%;
+    width: 30%;
 }
 
 .seccionCentral img{
     width: 100%;    
+}
+
+.seccionCentral div:nth-child(even){
+    filter: grayscale(100%);
+}
+
+.seccionCentral div:nth-child(1){
+    filter:blur(10px);
+}
+
+.seccionCentral div:nth-child(3){
+    filter: sepia(90%);
 }
 /* FIN SECCION CENTRAL       */
 /*---------------------------*/
@@ -163,6 +190,10 @@ footer a {
 
     .seccionSecundaria , .seccionCentral{                
         flex-direction: column;
+    }
+
+    .seccionCentral div{        
+        width: 100%;
     }
 
     footer {
