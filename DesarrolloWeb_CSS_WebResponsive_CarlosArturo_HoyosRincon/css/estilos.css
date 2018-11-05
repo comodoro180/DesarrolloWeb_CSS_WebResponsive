@@ -55,17 +55,39 @@ figcaption h3 {
     text-decoration-line:underline;
     color:black;
 }
-
-.seccionCentral {
+/*---------------------------*/
+.seccionPrincipal {
     width: 100%;
     background-color:#82c3a6;
 }
 
-#imagenCentral {
+#imagenPrincipal {
     width: 80%;
     margin: 2% auto;
     display: block;    
 }
+/*---------------------------*/
+
+/* SECCION CENTRAL           */
+/*---------------------------*/
+.seccionCentral {
+    width: 100%;
+    background-color: #d5c75f;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.seccionCentral div{
+    padding: 3%;
+}
+
+.seccionCentral img{
+    width: 100%;    
+}
+/* FIN SECCION CENTRAL       */
+/*---------------------------*/
 
 .seccionSecundaria {
     width: 100%;
@@ -139,7 +161,7 @@ footer a {
         text-align: center;
     }
 
-    .seccionSecundaria {
+    .seccionSecundaria , .seccionCentral{                
         flex-direction: column;
     }
 
